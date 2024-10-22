@@ -327,6 +327,7 @@ section {
 
 #experience {
     position: relative;
+    margin-top: 150px;
 }
 
 .experience-sub-title {
@@ -367,6 +368,7 @@ article .icon {
 
 #projects {
     position: relative;
+    margin-top: 150px;
 }
 
 .color-container {
@@ -394,10 +396,12 @@ article .icon {
 /* CONTACT SECTION */
 
 #contact {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    margin-top: 150px;
 }
 
 .contact-info-upper-container {
