@@ -60,6 +60,7 @@ a:hover {
 
 .logo {
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .logo:hover {
@@ -436,6 +437,58 @@ article .icon {
 }
 
 
+/* CONTACT FORM SECTION */
+
+label{
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    margin: auto;
+    max-width: 600px;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-color: black;
+    border-radius: 10px;
+    color: black;
+}
+
+form button {
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    /* background: rgb(0, 0, 0); */
+    background: grey;
+    /* color: #fff; */
+    color: black;
+    border: 1px solid #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  form button:hover {
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: rgb(0, 0, 0);
+    /* color: black; */
+    color: #fff;
+    transition: 0.3s;
+  }
+
+
 /* FOOTER SECTION */
 
 footer {
@@ -446,3 +499,46 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* ------------------------------------------------------------------ */
+/* Modal Default Styles */
+.modal {
+    display: none; 
+    /* display: flex; */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close Button (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* ------------------------------------------------------------------------ */
