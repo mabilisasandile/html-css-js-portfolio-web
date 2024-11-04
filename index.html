@@ -112,7 +112,7 @@
                         I am a Software Developer recently graduated in IT Software Development with a passion for crafting innovative solutions through web and mobile development. With hands-on experience gained during my time at mLab, I have honed my skills in both front-end and back-end development.
                     </p>
                     <!-- Trigger Button -->
-                    <!-- <button id="openModalBtn">Read More...</button> -->
+                    <button id="openModalBtn" class="btn btn-color-2 project-btn">Read More...</button>
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
@@ -380,32 +380,13 @@
                 </div>
             </div>
             <div>
-                <button onclick="location.href='projects.html'">View All Projects...</button>
+                <button 
+                    onclick="location.href='projects.html'"
+                    class="btn btn-color-2 project-btn"
+                >
+                    View All Projects...
+                </button>
             </div>
-            <!-- <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                        src="./assets/project_img1.jpg" 
-                        alt="Project 3"
-                        class="project-img" 
-                    />
-                </div>
-                <h2 class="experience-sub-title project-title">Weather App (React & API integrated)</h2>
-                <div class="btn-container">
-                    <button
-                        class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/mabilisasandile/weather-app'"
-                    >
-                        GitHub
-                    </button>
-                    <button
-                        class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://weather-app-f5c30.web.app'"
-                    >
-                        Live Demo
-                    </button>
-                </div>
-            </div> -->
         </div>
        </div>
        <img 
@@ -451,5 +432,6 @@
         <p>Copyright &#169; 2024 Sandile Mabilisa. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html> 
