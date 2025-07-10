@@ -64,6 +64,18 @@
                 </a>
             </div>
 
+            <button id="openModalBtn" class="btn btn-color-2 project-btn">Ask Me Something</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="chat-container">
+                        <div id="messages"></div>
+                        <input type="text" id="userInput" placeholder="Ask me something..." />
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -269,7 +281,8 @@
                     <h2 class="experience-sub-title project-title">Smart Campus App</h2>
                     <div class="btn-container">
                         <a class="btn btn-color-2 project-btn"
-                            href='https://github.com/mabilisasandile/smart-campus-app/blob/main/README.md' target="_blank">
+                            href='https://github.com/mabilisasandile/smart-campus-app/blob/main/README.md'
+                            target="_blank">
                             Info.
                         </a>
                         <a class="btn btn-color-2 project-btn"
@@ -411,6 +424,7 @@
     <script src="script.js"></script>
     <script src="modal.js"></script>
     <script src="notification.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 
 </html>

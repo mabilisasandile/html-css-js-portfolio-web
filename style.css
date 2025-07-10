@@ -585,3 +585,28 @@ footer p {
 }
 
 /* ------------------------------------------------------------------------ */
+
+/* Chatbot styles */
+.chat-container {
+  width: 350px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.chat-container input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
