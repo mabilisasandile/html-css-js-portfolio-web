@@ -1,4 +1,6 @@
-document.getElementById("sendBtn").addEventListener("click", sendMessage);
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("sendBtn").addEventListener("click", sendMessage);
+});
 
 function sendMessage() {
   const input = document.getElementById("userInput");
