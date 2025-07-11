@@ -17,10 +17,10 @@ function sendMessage() {
   })
   .then(res => res.json())
   .then(data => {
-    appendMessage("Bot", data.reply);
+    appendMessage("Sandile", data.reply);
   })
   .catch(() => {
-    appendMessage("Bot", "Sorry, something went wrong.");
+    appendMessage("Sandile", "Sorry, something went wrong.");
   });
 }
 
