@@ -8,30 +8,36 @@ function toggleMenu() {
 
 
 // Message logic
-document.getElementById('emailForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('emailForm');
+    if (!form) return; // Prevent further errors if form is missing
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    const FormData = {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-    }
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    // Send email request
-    fetch('https://my-node-app-qfg5.onrender.com/submit-form', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ FormData }),
-    })
-    .then(response => response.text())
-    .then(data => alert(data))
-    .catch(error => console.error('Error:', error));
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        const FormData = {
+            name,
+            email,
+            subject,
+            message
+        };
+
+        // Send email request
+        fetch('https://my-node-app-qfg5.onrender.com/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ FormData }),
+        })
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    });
 });
