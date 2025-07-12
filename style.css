@@ -277,6 +277,13 @@ section {
     position: relative;
 }
 
+@media (max-width: 480px) {
+    #about {
+        margin-top: 100px;
+        margin-bottom: 100px;   
+    }
+}
+
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
@@ -372,6 +379,14 @@ article .icon {
 #projects {
     position: relative;
     margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+@media (max-width: 480px) {
+    #projects {
+        margin-top: 100px;
+        margin-bottom: 100px;   
+    }
 }
 
 .color-container {
