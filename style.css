@@ -213,6 +213,9 @@ section {
     gap: 1rem;
 }
 
+#socials-container img {
+    border-radius: 50%;
+}
 
 /* ICONS */
 
@@ -637,7 +640,7 @@ footer p {
   }
 }
 
-.open_modal_btn {
+.open-modal-btn {
     width: 30%;
     position: fixed;
     bottom: 20px;
@@ -651,15 +654,18 @@ footer p {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
   }
 
-  .open_modal_btn img {
-    width: 70px;
+  .open-modal-btn img {
+    width: 100px;
     height: 50px;
     display: block;
-    margin: 0 auto 4px;
+    margin: 0 auto 0 auto;
+    border-radius: 50px;
   }
 
-  .open_modal_btn:hover {
+  .open-modal-btn:hover {
     background-color: #0056b3;
   }
