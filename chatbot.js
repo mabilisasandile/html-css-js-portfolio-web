@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function sendMessage() {
   const input = document.getElementById("userInput");
-  const message = input.value.trim();
-  if (!message) return;
+  const prompt = input.value.trim();
+  if (!prompt) return;
 
-  appendMessage("You", message);
+  appendMessage("You", prompt);
   input.value = "";
 
   fetch("https://my-node-app-qfg5.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message })
+    body: JSON.stringify({ prompt })
   })
   .then(res => res.json())
   .then(data => {
