@@ -619,7 +619,44 @@ footer p {
   border: 1px solid #eee;
   padding: 10px;
   margin-bottom: 10px;
-  background: #fafafa;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Sent messages (user) */
+.user-message {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+/* Received messages (AI bot) */
+.bot-message {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+  color: #333;
+  border-bottom-left-radius: 5px;
+}
+
+/* Optional: name styling */
+.message strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  color: #555;
 }
 
 .chat-container input,

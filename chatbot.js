@@ -4,30 +4,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function sendMessage() {
   const input = document.getElementById("userInput");
-  const prompt = input.value.trim();
-  if (!prompt) return;
+  const message = input.value.trim();
+  if (!message) return;
 
-  appendMessage("You", prompt);
+  appendMessage("You", message);
   input.value = "";
+
+  console.log("Sending prompt:", message);
 
   fetch("https://my-node-app-qfg5.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt })
+    body: JSON.stringify({ message })
   })
-  .then(res => res.json())
+  .then(res => {
+    console.log("Response status:", res.status);
+    return res.json();
+  })
   .then(data => {
+    console.log("Reply from server:", data);
     appendMessage("Sandile", data.reply);
   })
-  .catch(() => {
+  .catch(err => {
+    console.error("Fetch error:", err);
     appendMessage("Sandile", "Sorry, something went wrong.");
   });
 }
 
+
 function appendMessage(sender, text) {
   const messages = document.getElementById("messages");
   const msg = document.createElement("div");
-  msg.textContent = `${sender}: ${text}`;
+
+  // Assign a class for styling
+  msg.className = sender === "You" ? "message user-message" : "message bot-message";
+  msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+
   messages.appendChild(msg);
   messages.scrollTop = messages.scrollHeight;
 }
