@@ -22,6 +22,7 @@ async function sendNotification () {
         
     } catch (error) {
         console.log("Sending notification error:", error)
+        console.error('Error sending email:', error.message, error.response);
     }
     
 }
